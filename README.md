@@ -1,4 +1,4 @@
-# Model Service
+# Boilerplate Service
 This is a boilerplate REST microservice in Python.
 
 ## Installation & Setup
