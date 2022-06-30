@@ -1,0 +1,43 @@
+image: python:latest
+
+stages:
+  - build
+  - static analysis
+  - test
+
+.setup_poetry:
+  before_script:
+    - pip install poetry
+    - poetry config virtualenvs.create false
+    - poetry install
+
+mypy:
+  stage: static analysis
+  extends: .setup_poetry
+  script:
+    - ./bin/run-mypy.sh
+
+flake8:
+  stage: static analysis
+  extends: .setup_poetry
+  script:
+    - ./bin/run-flake8.sh
+
+black:
+  stage: static analysis
+  extends: .setup_poetry
+  script:
+    - ./bin/run-black.sh
+
+
+vulture:
+  stage: static analysis
+  extends: .setup_poetry
+  script:
+    - poetry run python -m vulture src/ .vulture-whitelist
+
+unit_tests:
+  stage: test
+  extends: .setup_poetry
+  script:
+    - poetry run python -m pytest tests/unit
