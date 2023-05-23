@@ -4,9 +4,9 @@ from brotli_asgi import BrotliMiddleware
 from fastapi.applications import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from boilerplate.routers import root
+from currency.routers import convertor
 
-log = logging.getLogger("simple_example")
+log = logging.getLogger("currency_convertor")
 
 
 def get_app() -> FastAPI:
@@ -19,5 +19,5 @@ def get_app() -> FastAPI:
         allow_headers=["*"],
     )
     app.add_middleware(BrotliMiddleware)
-    app.include_router(root.router, prefix="/root")
+    app.include_router(convertor.router, prefix="/currency")
     return app

@@ -9,13 +9,11 @@ python = "^3.9"
 fastapi = "^0.78.0"
 brotli-asgi = "^1.1.0"
 uvicorn = "^0.18.2"
+pydantic = "^1.10.4"
+requests = "^2.28.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
-black = "^22.6.0"
-mypy = "^0.961"
-flake8 = "^4.0.1"
-vulture = "^2.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
