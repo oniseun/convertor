@@ -1,0 +1,14 @@
+
+version: "3.7"
+services:
+
+    backend:
+        container_name: currency-backend
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+        - "9898:9898"
+        environment:
+            - CURRENCY_API_KEY=${CURRENCY_API_KEY}
+        
