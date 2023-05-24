@@ -3,4 +3,4 @@ from pydantic import BaseModel
 from typing import  Any
 
 class CurrencyResponse(BaseModel):
-    target_amount: Any
+    target_amount: float

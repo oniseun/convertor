@@ -25,6 +25,17 @@ EXPORT CURRENCY_API_KEY=your-api-key
 docker-compose up
 ```
 
+## Run request on CURL 
+```sh
+curl --location --request POST 'http://localhost:9898/currency/convert' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "init_currency": "GBP",
+  "target_currency": "EUR",
+  "amount": 10.0
+}'
+```
 ## Objectives
 * To improve this service however you see fit.
 * This should be timeboxed to around 1-2 hours.
