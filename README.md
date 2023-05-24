@@ -19,6 +19,12 @@ this should create a new virtual environment located in `.venv` or `venv` direct
 poetry run python -m currency
 ```
 
+## Run the service with docker
+```sh
+EXPORT CURRENCY_API_KEY=your-api-key
+docker-compose up
+```
+
 ## Objectives
 * To improve this service however you see fit.
 * This should be timeboxed to around 1-2 hours.
