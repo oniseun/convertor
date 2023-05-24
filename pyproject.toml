@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "boilerplate"
+name = "currency"
 version = "0.1.0"
-description = "A boilerplate microservice"
+description = "A currency converter microservice"
 authors = []
 
 [tool.poetry.dependencies]
@@ -11,6 +11,8 @@ brotli-asgi = "^1.1.0"
 uvicorn = "^0.18.2"
 pydantic = "^1.10.4"
 requests = "^2.28.2"
+fastapi-router-controller = "^0.5.0"
+simple-cache = "^0.35"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"

@@ -3,10 +3,11 @@ import logging
 import uvicorn
 
 import currency
-from currency.config import PORT
-from currency.service import get_app
+from config.app import PORT
+from main import get_app
 
-log = logging.getLogger("simple_example")
+logging.basicConfig(level=logging.DEBUG)
+log = logging.getLogger("convertor app")
 
 
 def main(port: int = PORT) -> None:
