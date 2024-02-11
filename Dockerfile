@@ -1,5 +1,5 @@
 
-FROM python:3.9-alpine
+FROM python:3.12-alpine
 ENV PYTHONUNBUFFERED=1
 RUN apk update && apk upgrade
 RUN apk add --no-cache --virtual .build-deps 
